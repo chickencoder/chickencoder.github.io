@@ -1,3 +1,0 @@
-/usr/bin/ld:/home/jesse/Desktop/sibley.xyz/css/index.css: file format not recognized; treating as linker script
-/usr/bin/ld:/home/jesse/Desktop/sibley.xyz/css/index.css:1: syntax error
-collect2: error: ld returned 1 exit status
