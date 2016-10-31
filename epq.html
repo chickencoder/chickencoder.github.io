@@ -1,43 +1,44 @@
-EPQ References
---------------
+<h1>EPQ References</h1>
 
-1.  Emails with the Flocking Email List..
-    http://lists.idrc.ocad.ca/mailman/listinfo/flocking
-   
-    Hi Jesse, 
-    Glad to hear you're into Flocking! Your project sounds like a cool idea. 
 
-    Some other Flocking users have done live coding-related projects with it. Adam Tindale, I think, has written a kind of command prompt interpreter for his live coding performances with Flocking. I did a piece a few years ago with "live data merging" as well: 
-    https://github.com/colinbdclark/compositions/tree/master/eightbyeight 
+<strong>Emails with the Flocking Email List..<strong>
+<em>http://lists.idrc.ocad.ca/mailman/listinfo/flocking
 
-    If you're using the version of Flocking from Github's master, there is a CodeMirror editor component available already that you may want to build from. It's the same editor as used in the playground: 
-    http://flockingjs.org/next/demos/playground/live/ 
-    Here's the source for it: 
-    https://github.com/colinbdclark/Flocking/tree/master/src/ui/editor 
+<p>Hi Jesse, <br>
+    Glad to hear you're into Flocking! Your project sounds like a cool idea.</p>
 
-    Flocking is, as you've perhaps, not very well documented and will undergo a lot of change after the 0.2.0 release to bring it up to speed with the latest Web Audio APIs and new strategies for declaring synths as data. 
+<p>Some other Flocking users have done live coding-related projects with it. Adam Tindale, I think, has written a kind of command prompt interpreter for his live coding performances with Flocking. I did a piece a few years ago with "live data merging" as well: 
+    https://github.com/colinbdclark/compositions/tree/master/eightbyeight</p>
 
-    As for your question about multiple buffers, I'm not totally sure what kind of an approach you're looking at. You can certainly preload multiple buffers at once—perhaps when your application first loads—by using Flocking's bufferLoader component: 
+<p>If you're using the version of Flocking from Github's master, there is a CodeMirror editor component available already that you may want to build from. It's the same editor as used in the playground: 
+    http://flockingjs.org/next/demos/playground/live/</p>
 
-    https://github.com/colinbdclark/Flocking/blob/master/docs/buffers/about-buffers.md#buffer-loader 
-    Once loaded, a buffer is available to any synth simply by specifying its ID; you can change the buffer that, for example, a flock.ugen.playBuffer unit generator is using, with a call to Synth.set(). So depending on how much polyphony you want to support, you can either create multiple synths, multiple playBuffer ugens, or just use a single one and allow for swapping their buffers on the fly. 
+<p>Here's the source for it: 
+    <a href="https://github.com/colinbdclark/Flocking/tree/master/src/ui/editor">https://github.com/colinbdclark/Flocking/tree/master/src/ui/editor</a> </p>
 
-    Lastly, I would be remiss if I didn't mention Gibber, a JavaScript-based live coding environment, unrelated to Flocking, that has a lot of Sonic Pi-like features in the browser. Worth looking into if you don't want to roll your own live coding infrastructure from scratch: 
-    http://gibber.mat.ucsb.edu/ 
+<p>Flocking is, as you've perhaps, not very well documented and will undergo a lot of change after the 0.2.0 release to bring it up to speed with the latest Web Audio APIs and new strategies for declaring synths as data.</p> 
 
-    I hope this helps, 
-    Colin 
-  
-    -----------------------------------------------------------------------------
-  
-    On Oct 26, 2016, at 6:43 PM, Jesse Sibley <jessesibley@protonmail.com> wrote: 
-    Hello Flocking people! 
+<p>As for your question about multiple buffers, I'm not totally sure what kind of an approach you're looking at. You can certainly preload multiple buffers at once—perhaps when your application first loads—by using Flocking's bufferLoader component: 
+    <a href="https://github.com/colinbdclark/Flocking/blob/master/docs/buffers/about-buffers.md#buffer-loader">https://github.com/colinbdclark/Flocking/blob/master/docs/buffers/about-buffers.md#buffer-loader</a></p>
 
-    I've joined the mailing list (which I hope is active) to look for guidance with a project I'm currently working on. I am building a web-based live coding environment (similar to SonicPi and Tidalcycles but for the web) for programming simple audio/visuals. The app will feature a basic ACE editor where vanilla javascript will allow users to interact with the environment.The design of the API is inspired by p5.js which will also be the library I use for the visuals. FlockingJS seems to be the perfect synthesis engine for this project so I've been learning how to use it. 
+<p>Once loaded, a buffer is available to any synth simply by specifying its ID; you can change the buffer that, for example, a flock.ugen.playBuffer unit generator is using, with a call to Synth.set(). So depending on how much polyphony you want to support, you can either create multiple synths, multiple playBuffer ugens, or just use a single one and allow for swapping their buffers on the fly.</p>
 
-    Firstly, I plan on having a preset of around 20 samples/buffers for users to play with. What would be the best approach for having access to all of these buffers at once considering the code will be updated in realtime? Would this require 20 pre-defined synths even though it is unlikely that they would all be needed or is there an easier way to inject synth definitions into a running instance of Flocking? 
+<p>Lastly, I would be remiss if I didn't mention Gibber, a JavaScript-based live coding environment, unrelated to Flocking, that has a lot of Sonic Pi-like features in the browser. Worth looking into if you don't want to roll your own live coding infrastructure from scratch: 
+    <a href="http://gibber.mat.ucsb.edu/">http://gibber.mat.ucsb.edu/</a></p>
 
-    I would really appreciate any advice on any areas of my project! 
+<p>I hope this helps, <br>
+    Colin</p>
 
-    Thanks a lot, 
-    Jesse Sibley
+-----------------------------------------------------------------------------
+
+On Oct 26, 2016, at 6:43 PM, Jesse Sibley <jessesibley@protonmail.com> wrote: 
+Hello Flocking people! 
+
+I've joined the mailing list (which I hope is active) to look for guidance with a project I'm currently working on. I am building a web-based live coding environment (similar to SonicPi and Tidalcycles but for the web) for programming simple audio/visuals. The app will feature a basic ACE editor where vanilla javascript will allow users to interact with the environment.The design of the API is inspired by p5.js which will also be the library I use for the visuals. FlockingJS seems to be the perfect synthesis engine for this project so I've been learning how to use it. 
+
+Firstly, I plan on having a preset of around 20 samples/buffers for users to play with. What would be the best approach for having access to all of these buffers at once considering the code will be updated in realtime? Would this require 20 pre-defined synths even though it is unlikely that they would all be needed or is there an easier way to inject synth definitions into a running instance of Flocking? 
+
+I would really appreciate any advice on any areas of my project! 
+
+Thanks a lot, 
+Jesse Sibley
