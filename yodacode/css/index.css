@@ -9,6 +9,16 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,0) !important;
+    transition: all 0.1s linear;
+}
+
+.shadow {
+    box-shadow: inset 0 0 15px dodgerblue;
+    transition: all 0.1s linear;
+}
+
+.noshadow {
+    box-shadow: none;
 }
 
 .canvas {
@@ -18,4 +28,53 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
+}
+
+#run {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+#halt {
+    position: absolute;
+    top: 3em;
+    right: 1em;
+}
+
+.button {
+    font-size: 0.8rem;
+    background: rgba(0,0,0,0);
+    border: 1px solid white;
+    color: white;
+    outline: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

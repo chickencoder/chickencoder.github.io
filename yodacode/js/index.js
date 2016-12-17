@@ -1,35 +1,67 @@
-
-var editor = ace.edit("editor");
-editor.setTheme("ace/theme/twilight");
-editor.getSession().setMode("ace/mode/javascript");
-
-editor.setOptions({
-  fontSize: "18px",
-  cursorStyle: "wide"
-});
-
-
-// define clear function
-function force_clear() {
-    $("#inject").html("");
+function inject(code) {
+    var el = document.createElement("script");
+    el.innerHTML = code;
+    $("#injected_code_goes_here").empty();
+    $("#injected_code_goes_here").append(el); 
 }
 
-var refreshRate = 0.1;
-var buffer = editor.getValue();
-setInterval(function() {
-    
-    if (buffer != editor.getValue()) {
-        // Run JSHINT to look for errors
-        JSHINT(editor.getValue(), {}, {});
+$(function() {
+    // Setup editor
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/ambiance");
+    editor.getSession().setMode("ace/mode/javascript");
+
+    editor.setOptions({
+        fontSize: "18px",
+        cursorStyle: "wide",
+        displayIndentGuides: false,
+        showPrintMargin: false,
+        showGutter: false
+    });
+
+    $(window).on('resize', function() {
+        $("canvas").css("width", window.innerWidth);
+        $("canvas").css("height", window.innerHeight);
+    });
+
+    $("#run").click(function() {
+        var code = LAMBANG(editor.getValue());
+        JSHINT(code, {}, {});
+
+        $("#editor").toggleClass("shadow");
+        setTimeout(function() {
+            $("#editor").removeClass("shadow");
+        }, 100);
 
         if (JSHINT.errors.length == 0) {
-            $("#inject").empty();
-            var el = document.createElement("script");
-            el.innerHTML = editor.getValue();
-            $("#inject").append(el);     
+            inject(code); 
         } else {
-            console.log("Erorr");
+            console.log("Errors:", JSHINT.data());
         }
-    }
-    buffer = editor.getValue();
-}, refreshRate*1000);
+    });
+
+    $("#halt").click(function() {
+        inject("function draw() { background(0); }");
+    });
+
+    $(document).on("keydown", "#editor", function(e) {
+        if ((e.keyCode == 10 || e.keyCode == 13) && e.ctrlKey) {
+            var code = LAMBANG(editor.getValue());
+            JSHINT(code, {}, {});
+
+            // Animate Shadow
+            $("#editor").toggleClass("shadow");
+            setTimeout(function() {
+                $("#editor").removeClass("shadow");
+            }, 100);
+
+
+            if (JSHINT.errors.length == 0) {
+                inject(code); 
+            } else {
+                console.log("Errors:", JSHINT.data());
+            }
+        }
+    });
+   
+});
