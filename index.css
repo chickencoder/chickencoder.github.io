@@ -14,16 +14,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  background-color: #FFCA00;
   min-height: 15em;
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: center;
+  color: #111;
 }
 
 #title {
-  color: white;
   margin: 0;
   font-size: 3rem;
   text-align: center;
@@ -38,7 +37,7 @@ main {
 
 #container {
   padding: 0.5em;
-  max-width: 500px;
+  max-width: 768px;
   margin: 0 auto;
 }
 
