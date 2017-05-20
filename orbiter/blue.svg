@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 841.9 595.3" style="enable-background:new 0 0 841.9 595.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#27AAE1;}
+	.st1{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st2{fill:#27AAE1;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+</style>
+<g id="XMLID_1_">
+	<g id="XMLID_4_">
+		<path id="XMLID_38_" class="st0" d="M771.8,466.2c0,5.5-4.5,10-10,10H80.1c-5.5,0-10-4.5-10-10V129c0-5.5,4.5-10,10-10h681.8
+			c5.5,0,10,4.5,10,10V466.2z"/>
+		<path id="XMLID_37_" class="st1" d="M771.8,466.2c0,5.5-4.5,10-10,10H80.1c-5.5,0-10-4.5-10-10V129c0-5.5,4.5-10,10-10h681.8
+			c5.5,0,10,4.5,10,10V466.2z"/>
+	</g>
+	<g id="XMLID_29_">
+		<g id="XMLID_23_">
+			<g id="XMLID_5_">
+				<ellipse id="XMLID_7_" class="st2" cx="143.5" cy="195.3" rx="35.8" ry="36"/>
+				<line id="XMLID_6_" class="st2" x1="143.5" y1="159.3" x2="143.5" y2="195.3"/>
+			</g>
+			<g id="XMLID_8_">
+				<ellipse id="XMLID_10_" class="st2" cx="249.5" cy="195.3" rx="35.8" ry="36"/>
+				<line id="XMLID_9_" class="st2" x1="249.5" y1="159.3" x2="249.5" y2="195.3"/>
+			</g>
+			<g id="XMLID_11_">
+				<ellipse id="XMLID_13_" class="st2" cx="353.5" cy="195.3" rx="35.8" ry="36"/>
+				<line id="XMLID_12_" class="st2" x1="353.5" y1="159.3" x2="353.5" y2="195.3"/>
+			</g>
+		</g>
+		<ellipse id="XMLID_3_" class="st2" cx="698.4" cy="195.3" rx="35.8" ry="36"/>
+	</g>
+	<circle id="XMLID_17_" class="st2" cx="698.4" cy="401.9" r="16.5"/>
+	<g id="XMLID_14_">
+		<g id="XMLID_22_">
+			<circle id="XMLID_16_" class="st2" cx="285.3" cy="342.9" r="16.5"/>
+			<circle id="XMLID_18_" class="st2" cx="381.3" cy="342.9" r="16.5"/>
+			<circle id="XMLID_19_" class="st2" cx="472.2" cy="342.9" r="16.5"/>
+			<circle id="XMLID_20_" class="st2" cx="556.6" cy="342.9" r="16.5"/>
+		</g>
+		<g id="XMLID_15_">
+			<circle id="XMLID_24_" class="st2" cx="327.5" cy="401.9" r="16.5"/>
+			<circle id="XMLID_21_" class="st2" cx="423.5" cy="401.9" r="16.5"/>
+			<circle id="XMLID_25_" class="st2" cx="514.4" cy="401.9" r="16.5"/>
+		</g>
+	</g>
+	<ellipse id="XMLID_26_" class="st2" cx="698.4" cy="342.9" rx="12" ry="12.4"/>
+	<line id="XMLID_2_" class="st2" x1="698.4" y1="159.8" x2="698.4" y2="195.8"/>
+</g>
+</svg>
